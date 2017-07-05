@@ -58,6 +58,7 @@ The type of authentication used by this API is: `Basic Authentication`
 
 > **Note:** *Authentication isn't required to create a new account.*
 
+Hello world this is a random note
 
 
 #### Request Headers
