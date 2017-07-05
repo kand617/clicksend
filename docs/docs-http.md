@@ -54,7 +54,7 @@ The type of authentication used by this API is: `Basic Authentication`
 ## <a name="account"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "Account") Account
 
 
-### <a name="create_a_new_account"></a>![Endpoint: ](https://apidocs.io/img/method.png "Create a new account") `POST` /account
+### <a name="create_a_new_member"></a>![Endpoint: ](https://apidocs.io/img/method.png "Create a new Member") `POST` /account
 
 > **Note:** *Authentication isn't required to create a new account.*
 
@@ -74,14 +74,14 @@ Raw
  Example 
 ``` 
 {
-  "username": "johndoe1",
-  "user_email": "johndoe1@awesome.com",
-  "user_phone": "518-481-1001",
-  "user_first_name": "John",
-  "user_last_name": "Doe",
-  "country": "US",
-  "password": "pass",
-  "account_name": "The Awesome Company"
+  "username": "username",
+  "password": "password",
+  "user_email": "user_email",
+  "user_phone": "user_phone",
+  "user_first_name": "user_first_name",
+  "user_last_name": "user_last_name",
+  "account_name": "account_name",
+  "country": "country"
 }
 ``` 
 
@@ -610,11 +610,11 @@ Raw
  Example 
 ``` 
 {
-  "expiry_month": 102.043009915875,
-  "cvc": 102.043009915875,
+  "expiry_month": 103.694755515873,
+  "cvc": 103.694755515873,
   "name": "name",
-  "number": 102.043009915875,
-  "expiry_year": 102.043009915875
+  "number": 103.694755515873,
+  "expiry_year": 103.694755515873
 }
 ``` 
 
@@ -624,7 +624,7 @@ Raw
 Body (_Update Credit Card info response_) 
 ```
 {
-  "http_code": 102,
+  "http_code": 103,
   "response_code": "response_code",
   "response_msg": "response_msg",
   "data": {}
@@ -1297,13 +1297,13 @@ Raw
  Example 
 ``` 
 {
-  "dedicated_number": 102.043009915875,
+  "dedicated_number": 103.694755515873,
   "rule_name": "rule_name",
-  "message_search_type": 102.043009915875,
+  "message_search_type": 103.694755515873,
   "message_search_term": "message_search_term",
   "action": "action",
   "action_address": "action_address",
-  "enabled": 102.043009915875
+  "enabled": 103.694755515873
 }
 ``` 
 
@@ -1313,7 +1313,7 @@ Raw
 Body (_Create a new rule response_) 
 ```
 {
-  "http_code": 102,
+  "http_code": 103,
   "response_code": "response_code",
   "response_msg": "response_msg",
   "data": {}
@@ -2379,7 +2379,7 @@ Body (_Update a rule response_)
 Body (_Delete a Rule response49_) 
 ```
 {
-  "http_code": 102,
+  "http_code": 103,
   "response_code": "response_code",
   "response_msg": "response_msg",
   "data": "data"
@@ -3799,6 +3799,16 @@ Body (_Transfer a Contact response_)
 ```
 
 
+### <a name="hello_contact"></a>![Endpoint: ](https://apidocs.io/img/method.png "Hello Contact") `GET` /getcontact
+
+> TODO: Add a method description
+
+
+
+#### Responses
+**200**
+
+
 [Back to API Reference](#api_reference)
 
 ## <a name="countries"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "Countries") Countries
@@ -4118,7 +4128,7 @@ Body (_Create Allowed Email Address response_)
 Body (_Send Verification Token response_) 
 ```
 {
-  "http_code": 60,
+  "http_code": 195,
   "response_code": "response_code",
   "response_msg": "response_msg",
   "data": "data"
@@ -4174,7 +4184,7 @@ Body (_Verify Allowed Email Address response_)
 Body (_Delete Allowed Email Address response_) 
 ```
 {
-  "http_code": 60,
+  "http_code": 195,
   "response_code": "response_code",
   "response_msg": "response_msg",
   "data": "data"
@@ -5628,9 +5638,9 @@ Raw
   ],
   "to": "to",
   "source": "source",
-  "list_id": 60.3198366893082,
+  "list_id": 195.190037407535,
   "from": "from",
-  "schedule": 60.3198366893082,
+  "schedule": 195.190037407535,
   "custom_string": "custom_string",
   "country": "country",
   "from_email": "from_email"
@@ -5643,7 +5653,7 @@ Raw
 Body (_Send Fax response_) 
 ```
 {
-  "http_code": 60,
+  "http_code": 195,
   "response_code": "response_code",
   "response_msg": "response_msg",
   "data": {}
@@ -5677,9 +5687,9 @@ Raw
   ],
   "to": "to",
   "source": "source",
-  "list_id": 60.3198366893082,
+  "list_id": 195.190037407535,
   "from": "from",
-  "schedule": 60.3198366893082,
+  "schedule": 195.190037407535,
   "custom_string": "custom_string",
   "country": "country",
   "from_email": "from_email"
@@ -5692,7 +5702,7 @@ Raw
 Body (_Calculate Price response_) 
 ```
 {
-  "http_code": 60,
+  "http_code": 195,
   "response_code": "response_code",
   "response_msg": "response_msg",
   "data": {}
@@ -6090,7 +6100,7 @@ Raw
 ``` 
 {
   "email": "email",
-  "phone_number": 60.3198366893082,
+  "phone_number": 31.6853192991974,
   "country": "country"
 }
 ``` 
@@ -6101,7 +6111,7 @@ Raw
 Body (_Forgot Username response_) 
 ```
 {
-  "http_code": 151,
+  "http_code": 31,
   "response_code": "response_code",
   "response_msg": "response_msg",
   "data": [
@@ -6219,9 +6229,9 @@ Raw
   "subject": "subject",
   "body": "body",
   "source": "source",
-  "list_id": 151.815118580971,
+  "list_id": 31.6853192991974,
   "from": "from",
-  "schedule": 151.815118580971,
+  "schedule": 31.6853192991974,
   "custom_string": "custom_string",
   "country": "country",
   "from_email": "from_email"
@@ -6234,7 +6244,7 @@ Raw
 Body (_Send MMS response_) 
 ```
 {
-  "http_code": 151,
+  "http_code": 31,
   "response_code": "response_code",
   "response_msg": "response_msg",
   "data": {}
@@ -6267,9 +6277,9 @@ Raw
   "subject": "subject",
   "body": "body",
   "source": "source",
-  "list_id": 151.815118580971,
+  "list_id": 31.6853192991974,
   "from": "from",
-  "schedule": 151.815118580971,
+  "schedule": 31.6853192991974,
   "custom_string": "custom_string",
   "country": "country",
   "from_email": "from_email"
@@ -6282,7 +6292,7 @@ Raw
 Body (_Get Price response_) 
 ```
 {
-  "http_code": 151,
+  "http_code": 31,
   "response_code": "response_code",
   "response_msg": "response_msg",
   "data": {}
@@ -6763,7 +6773,7 @@ Body (_Export MMS History response_)
 Body (_Cancel MMS response_) 
 ```
 {
-  "http_code": 151,
+  "http_code": 31,
   "response_code": "response_code",
   "response_msg": "response_msg",
   "data": "data"
@@ -6921,7 +6931,7 @@ Body (_Get Delivery Receipt response_)
 Body (_Mark Receipts As Read response_) 
 ```
 {
-  "http_code": 151,
+  "http_code": 31,
   "response_code": "response_code",
   "response_msg": "response_msg",
   "data": "data"
@@ -7427,7 +7437,7 @@ Raw
   "file_urls": [
     "file_urls"
   ],
-  "schedule": 151.815118580971,
+  "schedule": 31.6853192991974,
   "source": "source",
   "areas": [
     "areas"
@@ -7441,7 +7451,7 @@ Raw
 Body (_Create New Campaign response_) 
 ```
 {
-  "http_code": 151,
+  "http_code": 31,
   "response_code": "response_code",
   "response_msg": "response_msg",
   "data": {}
@@ -7474,7 +7484,7 @@ Raw
   "file_urls": [
     "file_urls"
   ],
-  "schedule": 151.815118580971,
+  "schedule": 31.6853192991974,
   "source": "source",
   "areas": [
     "areas"
@@ -7488,7 +7498,7 @@ Raw
 Body (_Calculate Direct Mail Campaign Price response_) 
 ```
 {
-  "http_code": 151,
+  "http_code": 31,
   "response_code": "response_code",
   "response_msg": "response_msg",
   "data": {}
@@ -10763,7 +10773,7 @@ Raw
 ``` 
 {
   "client_user_id": "client_user_id",
-  "balance": 110.091945354404,
+  "balance": 244.962146072631,
   "currency": "currency"
 }
 ``` 
@@ -10774,7 +10784,7 @@ Raw
 Body (_Transfer Credit response_) 
 ```
 {
-  "http_code": 110,
+  "http_code": 244,
   "response_code": "response_code",
   "response_msg": "response_msg",
   "data": {}
@@ -10887,9 +10897,9 @@ Raw
   "to": "to",
   "body": "body",
   "source": "source",
-  "list_id": 110.091945354404,
+  "list_id": 81.4574279642931,
   "from": "from",
-  "schedule": 110.091945354404,
+  "schedule": 81.4574279642931,
   "custom_string": "custom_string",
   "country": "country",
   "from_email": "from_email"
@@ -10902,7 +10912,7 @@ Raw
 Body (_Send an SMS response_) 
 ```
 {
-  "http_code": 110,
+  "http_code": 81,
   "response_code": "response_code",
   "response_msg": "response_msg",
   "data": {}
@@ -10933,9 +10943,9 @@ Raw
   "to": "to",
   "body": "body",
   "source": "source",
-  "list_id": 201.587227246066,
+  "list_id": 81.4574279642931,
   "from": "from",
-  "schedule": 201.587227246066,
+  "schedule": 81.4574279642931,
   "custom_string": "custom_string",
   "country": "country"
 }
@@ -10947,7 +10957,7 @@ Raw
 Body (_Calculate Price response_) 
 ```
 {
-  "http_code": 201,
+  "http_code": 81,
   "response_code": "response_code",
   "response_msg": "response_msg",
   "data": {}
@@ -14189,7 +14199,7 @@ Raw
     "to"
   ],
   "subject": "subject",
-  "from.email_address_id": 201.587227246066,
+  "from.email_address_id": 172.952709855955,
   "body": "body",
   "attachments": [
     "attachments"
@@ -14210,7 +14220,7 @@ Raw
 Body (_Email Send response_) 
 ```
 {
-  "http_code": 201,
+  "http_code": 172,
   "response_code": "response_code",
   "response_msg": "response_msg",
   "data": {}
@@ -14242,7 +14252,7 @@ Raw
     "to"
   ],
   "subject": "subject",
-  "from.email_address_id": 38.0825091377285,
+  "from.email_address_id": 172.952709855955,
   "body": "body",
   "attachments": [
     "attachments"
@@ -14263,7 +14273,7 @@ Raw
 Body (_Email Price response_) 
 ```
 {
-  "http_code": 38,
+  "http_code": 172,
   "response_code": "response_code",
   "response_msg": "response_msg",
   "data": {}
@@ -14512,7 +14522,7 @@ Raw
 Body (_Upload a file response_) 
 ```
 {
-  "http_code": 38,
+  "http_code": 172,
   "response_code": "response_code",
   "response_msg": "response_msg",
   "data": {}
@@ -14549,12 +14559,12 @@ Raw
   "body": "body",
   "voice": "voice",
   "source": "source",
-  "list_id": 38.0825091377285,
+  "list_id": 172.952709855955,
   "lang": "lang",
-  "schedule": 38.0825091377285,
+  "schedule": 172.952709855955,
   "custom_string": "custom_string",
   "country": "country",
-  "require_input": 38.0825091377285
+  "require_input": 172.952709855955
 }
 ``` 
 
@@ -14564,7 +14574,7 @@ Raw
 Body (_Send a Voice Call response_) 
 ```
 {
-  "http_code": 38,
+  "http_code": 172,
   "response_code": "response_code",
   "response_msg": "response_msg",
   "data": {}
@@ -14596,12 +14606,12 @@ Raw
   "body": "body",
   "voice": "voice",
   "source": "source",
-  "list_id": 38.0825091377285,
+  "list_id": 172.952709855955,
   "lang": "lang",
-  "schedule": 38.0825091377285,
+  "schedule": 172.952709855955,
   "custom_string": "custom_string",
   "country": "country",
-  "require_input": 38.0825091377285
+  "require_input": 172.952709855955
 }
 ``` 
 
@@ -14611,7 +14621,7 @@ Raw
 Body (_Calculate Price response_) 
 ```
 {
-  "http_code": 38,
+  "http_code": 172,
   "response_code": "response_code",
   "response_msg": "response_msg",
   "data": {}
@@ -15225,7 +15235,7 @@ Body (_Get Specific Voice Receipt response_)
 Body (_Marked Voice Receipts as Read response_) 
 ```
 {
-  "http_code": 38,
+  "http_code": 172,
   "response_code": "response_code",
   "response_msg": "response_msg",
   "data": "data"

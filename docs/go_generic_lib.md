@@ -161,13 +161,13 @@ Factory for the ``` ACCOUNT ``` interface can be accessed from the package accou
 account := account_pkg.NewACCOUNT()
 ```
 
-### <a name="create_a_new_account"></a>![Method: ](https://apidocs.io/img/method.png ".account_pkg.CreateANewAccount") CreateANewAccount
+### <a name="create_a_new_member"></a>![Method: ](https://apidocs.io/img/method.png ".account_pkg.CreateANewMember") CreateANewMember
 
 > **Note:** *Authentication isn't required to create a new account.*
 
 
 ```go
-func (me *ACCOUNT_IMPL) CreateANewAccount(body *models_pkg.CreateANewAccountRequest)(*models_pkg.CreateANewAccountResponse,error)
+func (me *ACCOUNT_IMPL) CreateANewMember(body *models_pkg.CreateANewAccountRequest)(*models_pkg.CreateANewAccountResponse,error)
 ```
 
 #### Parameters
@@ -180,12 +180,10 @@ func (me *ACCOUNT_IMPL) CreateANewAccount(body *models_pkg.CreateANewAccountRequ
 #### Example Usage
 
 ```go
-bodyValue := []byte("    {        \"username\":\"johndoe1\",        \"user_email\":\"johndoe1@awesome.com\",        \"user_phone\":\"518-481-1001\",        \"user_first_name\":\"John\",        \"user_last_name\":\"Doe\",        \"country\":\"US\",        \"password\":\"pass\",        \"account_name\":\"The Awesome Company\"    }")
 var body *models_pkg.CreateANewAccountRequest
-json.Unmarshal(bodyValue,&body)
 
 var result *models_pkg.CreateANewAccountResponse
-result,_ = account.CreateANewAccount(body)
+result,_ = account.CreateANewMember(body)
 
 ```
 
@@ -1163,7 +1161,7 @@ func (me *AUTOMATIONRULES_IMPL) DeleteARule2(ruleId float64)(*models_pkg.DeleteA
 #### Example Usage
 
 ```go
-ruleId := 161.54806024467
+ruleId := 155.150870406139
 
 var result *models_pkg.DeleteARuleResponse49
 result,_ = automationRules.DeleteARule2(ruleId)
@@ -1845,6 +1843,25 @@ result,_ = contacts.UpdateTransferAContact(fromListId, contactId, toListId)
 ```
 
 
+### <a name="get_hello_contact"></a>![Method: ](https://apidocs.io/img/method.png ".contacts_pkg.GetHelloContact") GetHelloContact
+
+> TODO: Add a method description
+
+
+```go
+func (me *CONTACTS_IMPL) GetHelloContact()(,error)
+```
+
+#### Example Usage
+
+```go
+
+var result 
+result,_ = contacts.GetHelloContact()
+
+```
+
+
 [Back to List of Controllers](#list_of_controllers)
 
 ## <a name="countries_pkg"></a>![Class: ](https://apidocs.io/img/class.png ".countries_pkg") countries_pkg
@@ -2015,7 +2032,7 @@ func (me *EMAILMARKETING_IMPL) UpdateSendVerificationToken(emailAddressId float6
 #### Example Usage
 
 ```go
-emailAddressId := 161.54806024467
+emailAddressId := 113.427697179573
 
 var result *models_pkg.SendVerificationTokenResponse
 result,_ = emailMarketing.UpdateSendVerificationToken(emailAddressId)
@@ -2073,7 +2090,7 @@ func (me *EMAILMARKETING_IMPL) DeleteAllowedEmailAddress(emailAddressId float64)
 #### Example Usage
 
 ```go
-emailAddressId := 161.54806024467
+emailAddressId := 113.427697179573
 
 var result *models_pkg.DeleteAllowedEmailAddressResponse
 result,_ = emailMarketing.DeleteAllowedEmailAddress(emailAddressId)
@@ -6335,7 +6352,7 @@ func (me *VOICE_IMPL) UpdateMarkedVoiceReceiptsAsRead(dateBefore float64)(*model
 #### Example Usage
 
 ```go
-dateBefore := 97.5875594665238
+dateBefore := 49.4671964014262
 
 var result *models_pkg.MarkedVoiceReceiptsAsReadResponse
 result,_ = voice.UpdateMarkedVoiceReceiptsAsRead(dateBefore)

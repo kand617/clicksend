@@ -176,13 +176,13 @@ The singleton instance of the ``` AccountController ``` class can be accessed fr
 $account = $client->getAccount();
 ```
 
-### <a name="create_a_new_account"></a>![Method: ](https://apidocs.io/img/method.png ".AccountController.createANewAccount") createANewAccount
+### <a name="create_a_new_member"></a>![Method: ](https://apidocs.io/img/method.png ".AccountController.createANewMember") createANewMember
 
 > **Note:** *Authentication isn't required to create a new account.*
 
 
 ```php
-function createANewAccount($body)
+function createANewMember($body)
 ```
 
 #### Parameters
@@ -196,10 +196,9 @@ function createANewAccount($body)
 #### Example Usage
 
 ```php
-$bodyValue = "    {        \"username\":\"johndoe1\",        \"user_email\":\"johndoe1@awesome.com\",        \"user_phone\":\"518-481-1001\",        \"user_first_name\":\"John\",        \"user_last_name\":\"Doe\",        \"country\":\"US\",        \"password\":\"pass\",        \"account_name\":\"The Awesome Company\"    }";
-$body = APIHelper::deserialize($bodyValue);
+$body = new CreateANewAccountRequest();
 
-$result = $account->createANewAccount($body);
+$result = $account->createANewMember($body);
 
 ```
 
@@ -1159,7 +1158,7 @@ function deleteARule2($ruleId)
 #### Example Usage
 
 ```php
-$ruleId = 133.171276018569;
+$ruleId = 13.0414767367958;
 
 $result = $automationRules->deleteARule2($ruleId);
 
@@ -1828,6 +1827,24 @@ $result = $contacts->updateTransferAContact($fromListId, $contactId, $toListId);
 ```
 
 
+### <a name="get_hello_contact"></a>![Method: ](https://apidocs.io/img/method.png ".ContactsController.getHelloContact") getHelloContact
+
+> TODO: Add a method description
+
+
+```php
+function getHelloContact()
+```
+
+#### Example Usage
+
+```php
+
+$contacts->getHelloContact();
+
+```
+
+
 [Back to List of Controllers](#list_of_controllers)
 
 ## <a name="countries_controller"></a>![Class: ](https://apidocs.io/img/class.png ".CountriesController") CountriesController
@@ -1994,7 +2011,7 @@ function updateSendVerificationToken($emailAddressId)
 #### Example Usage
 
 ```php
-$emailAddressId = 61.1618398018935;
+$emailAddressId = 104.536758628458;
 
 $result = $emailMarketing->updateSendVerificationToken($emailAddressId);
 
@@ -2052,7 +2069,7 @@ function deleteAllowedEmailAddress($emailAddressId)
 #### Example Usage
 
 ```php
-$emailAddressId = 61.1618398018935;
+$emailAddressId = 104.536758628458;
 
 $result = $emailMarketing->deleteAllowedEmailAddress($emailAddressId);
 
@@ -6244,7 +6261,7 @@ function updateMarkedVoiceReceiptsAsRead($dateBefore)
 #### Example Usage
 
 ```php
-$dateBefore = 252.201339023747;
+$dateBefore = 132.071539741974;
 
 $result = $voice->updateMarkedVoiceReceiptsAsRead($dateBefore);
 

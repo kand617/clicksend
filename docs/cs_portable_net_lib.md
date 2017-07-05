@@ -132,13 +132,13 @@ The singleton instance of the ``` AccountController ``` class can be accessed fr
 AccountController account = client.Account;
 ```
 
-### <a name="create_a_new_account"></a>![Method: ](https://apidocs.io/img/method.png "ClickSendRESTAPIV3.Tests.Controllers.AccountController.CreateANewAccount") CreateANewAccount
+### <a name="create_a_new_member"></a>![Method: ](https://apidocs.io/img/method.png "ClickSendRESTAPIV3.Tests.Controllers.AccountController.CreateANewMember") CreateANewMember
 
 > **Note:** *Authentication isn't required to create a new account.*
 
 
 ```csharp
-Task<CreateANewAccountResponse> CreateANewAccount(CreateANewAccountRequest body)
+Task<CreateANewAccountResponse> CreateANewMember(CreateANewAccountRequest body)
 ```
 
 #### Parameters
@@ -151,10 +151,9 @@ Task<CreateANewAccountResponse> CreateANewAccount(CreateANewAccountRequest body)
 #### Example Usage
 
 ```csharp
-string bodyValue = "    {        \"username\":\"johndoe1\",        \"user_email\":\"johndoe1@awesome.com\",        \"user_phone\":\"518-481-1001\",        \"user_first_name\":\"John\",        \"user_last_name\":\"Doe\",        \"country\":\"US\",        \"password\":\"pass\",        \"account_name\":\"The Awesome Company\"    }";
-var body = Newtonsoft.Json.JsonConvert.DeserializeObject<CreateANewAccountRequest>(bodyValue);
+var body = new CreateANewAccountRequest();
 
-CreateANewAccountResponse result = await account.CreateANewAccount(body);
+CreateANewAccountResponse result = await account.CreateANewMember(body);
 
 ```
 
@@ -1073,7 +1072,7 @@ Task<DeleteARuleResponse49> DeleteARule2(double ruleId)
 #### Example Usage
 
 ```csharp
-double ruleId = 15.8252192385612;
+double ruleId = 100.923311291692;
 
 DeleteARuleResponse49 result = await automationRules.DeleteARule2(ruleId);
 
@@ -1699,6 +1698,24 @@ TransferAContactResponse result = await contacts.UpdateTransferAContact(fromList
 ```
 
 
+### <a name="get_hello_contact"></a>![Method: ](https://apidocs.io/img/method.png "ClickSendRESTAPIV3.Tests.Controllers.ContactsController.GetHelloContact") GetHelloContact
+
+> TODO: Add a method description
+
+
+```csharp
+Task GetHelloContact()
+```
+
+#### Example Usage
+
+```csharp
+
+await contacts.GetHelloContact();
+
+```
+
+
 [Back to List of Controllers](#list_of_controllers)
 
 ## <a name="countries_controller"></a>![Class: ](https://apidocs.io/img/class.png "ClickSendRESTAPIV3.Tests.Controllers.CountriesController") CountriesController
@@ -1862,7 +1879,7 @@ Task<SendVerificationTokenResponse> UpdateSendVerificationToken(double emailAddr
 #### Example Usage
 
 ```csharp
-double emailAddressId = 107.320501130224;
+double emailAddressId = 59.2001380651259;
 
 SendVerificationTokenResponse result = await emailMarketing.UpdateSendVerificationToken(emailAddressId);
 
@@ -1916,7 +1933,7 @@ Task<DeleteAllowedEmailAddressResponse> DeleteAllowedEmailAddress(double emailAd
 #### Example Usage
 
 ```csharp
-double emailAddressId = 107.320501130224;
+double emailAddressId = 59.2001380651259;
 
 DeleteAllowedEmailAddressResponse result = await emailMarketing.DeleteAllowedEmailAddress(emailAddressId);
 
@@ -5977,7 +5994,7 @@ Task<MarkedVoiceReceiptsAsReadResponse> UpdateMarkedVoiceReceiptsAsRead(double d
 #### Example Usage
 
 ```csharp
-double dateBefore = 206.864718460415;
+double dateBefore = 250.23963728698;
 
 MarkedVoiceReceiptsAsReadResponse result = await voice.UpdateMarkedVoiceReceiptsAsRead(dateBefore);
 

@@ -149,13 +149,13 @@ The singleton instance of the ``` AccountController ``` class can be accessed fr
 var controller = lib.AccountController;
 ```
 
-### <a name="create_a_new_account"></a>![Method: ](https://apidocs.io/img/method.png ".AccountController.createANewAccount") createANewAccount
+### <a name="create_a_new_member"></a>![Method: ](https://apidocs.io/img/method.png ".AccountController.createANewMember") createANewMember
 
 > **Note:** *Authentication isn't required to create a new account.*
 
 
 ```javascript
-function createANewAccount(body, callback)
+function createANewMember(body, callback)
 ```
 #### Parameters
 
@@ -169,9 +169,9 @@ function createANewAccount(body, callback)
 
 ```javascript
 
-    var body = new CreateANewAccountRequest(    {        "username":"johndoe1",        "user_email":"johndoe1@awesome.com",        "user_phone":"518-481-1001",        "user_first_name":"John",        "user_last_name":"Doe",        "country":"US",        "password":"pass",        "account_name":"The Awesome Company"    });
+    var body = new CreateANewAccountRequest({"key":"value"});
 
-    controller.createANewAccount(body, function(error, response, context) {
+    controller.createANewMember(body, function(error, response, context) {
 
     
 	});
@@ -1223,7 +1223,7 @@ function deleteARule2(ruleId, callback)
 
 ```javascript
 
-    var ruleId = 143.746220794854;
+    var ruleId = 137.349030956323;
 
     controller.deleteARule2(ruleId, function(error, response, context) {
 
@@ -1931,6 +1931,28 @@ function updateTransferAContact(fromListId, contactId, toListId, callback)
 
 
 
+### <a name="get_hello_contact"></a>![Method: ](https://apidocs.io/img/method.png ".ContactsController.getHelloContact") getHelloContact
+
+> TODO: Add a method description
+
+
+```javascript
+function getHelloContact(callback)
+```
+
+#### Example Usage
+
+```javascript
+
+
+    controller.getHelloContact(function(error, response, context) {
+
+    
+	});
+```
+
+
+
 [Back to List of Controllers](#list_of_controllers)
 
 ## <a name="countries_controller"></a>![Class: ](https://apidocs.io/img/class.png ".CountriesController") CountriesController
@@ -2113,7 +2135,7 @@ function updateSendVerificationToken(emailAddressId, callback)
 
 ```javascript
 
-    var emailAddressId = 143.746220794854;
+    var emailAddressId = 137.349030956323;
 
     controller.updateSendVerificationToken(emailAddressId, function(error, response, context) {
 
@@ -2175,7 +2197,7 @@ function deleteAllowedEmailAddress(emailAddressId, callback)
 
 ```javascript
 
-    var emailAddressId = 143.746220794854;
+    var emailAddressId = 137.349030956323;
 
     controller.deleteAllowedEmailAddress(emailAddressId, function(error, response, context) {
 
@@ -6715,7 +6737,7 @@ function updateMarkedVoiceReceiptsAsRead(dateBefore, callback)
 
 ```javascript
 
-    var dateBefore = 193.51832945995;
+    var dateBefore = 23.6164215130808;
 
     controller.updateMarkedVoiceReceiptsAsRead(dateBefore, function(error, response, context) {
 

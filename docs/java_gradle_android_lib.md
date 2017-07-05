@@ -159,13 +159,13 @@ The singleton instance of the ``` AccountController ``` class can be accessed fr
 AccountController account = client.getAccount();
 ```
 
-### <a name="create_a_new_account_async"></a>![Method: ](https://apidocs.io/img/method.png "com.clicksend.rest.controllers.AccountController.createANewAccountAsync") createANewAccountAsync
+### <a name="create_a_new_member_async"></a>![Method: ](https://apidocs.io/img/method.png "com.clicksend.rest.controllers.AccountController.createANewMemberAsync") createANewMemberAsync
 
 > **Note:** *Authentication isn't required to create a new account.*
 
 
 ```java
-void createANewAccountAsync(
+void createANewMemberAsync(
         final CreateANewAccountRequest body,
         final APICallBack<CreateANewAccountResponse> callBack)
 ```
@@ -181,10 +181,9 @@ void createANewAccountAsync(
 
 ```java
 try {
-    String bodyValue = "    {        \"username\":\"johndoe1\",        \"user_email\":\"johndoe1@awesome.com\",        \"user_phone\":\"518-481-1001\",        \"user_first_name\":\"John\",        \"user_last_name\":\"Doe\",        \"country\":\"US\",        \"password\":\"pass\",        \"account_name\":\"The Awesome Company\"    }";
-    CreateANewAccountRequest body = mapper.readValue(bodyValue,new TypeReference<CreateANewAccountRequest> (){});
+    CreateANewAccountRequest body = new CreateANewAccountRequest();
     // Invoking the API call with sample inputs
-    account.createANewAccountAsync(body, new APICallBack<CreateANewAccountResponse>() {
+    account.createANewMemberAsync(body, new APICallBack<CreateANewAccountResponse>() {
         public void onSuccess(HttpContext context, CreateANewAccountResponse response) {
             // TODO success callback handler
         }
@@ -1473,7 +1472,7 @@ void deleteARule2Async(
 #### Example Usage
 
 ```java
-double ruleId = 147.35966813162;
+double ruleId = 140.962478293088;
 // Invoking the API call with sample inputs
 automationRules.deleteARule2Async(ruleId, new APICallBack<DeleteARuleResponse49>() {
     public void onSuccess(HttpContext context, DeleteARuleResponse49 response) {
@@ -2347,6 +2346,31 @@ contacts.updateTransferAContactAsync(fromListId, contactId, toListId, new APICal
 ```
 
 
+### <a name="get_hello_contact_async"></a>![Method: ](https://apidocs.io/img/method.png "com.clicksend.rest.controllers.ContactsController.getHelloContactAsync") getHelloContactAsync
+
+> TODO: Add a method description
+
+
+```java
+void getHelloContactAsync(final APICallBack<Object> callBack)
+```
+
+#### Example Usage
+
+```java
+// Invoking the API call with sample inputs
+contacts.getHelloContactAsync(new APICallBack<void>() {
+    public void onSuccess(HttpContext context, void response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
+```
+
+
 [Back to List of Controllers](#list_of_controllers)
 
 ## <a name="countries_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.clicksend.rest.controllers.CountriesController") CountriesController
@@ -2559,7 +2583,7 @@ void updateSendVerificationTokenAsync(
 #### Example Usage
 
 ```java
-double emailAddressId = 238.854950023282;
+double emailAddressId = 232.457760184751;
 // Invoking the API call with sample inputs
 emailMarketing.updateSendVerificationTokenAsync(emailAddressId, new APICallBack<SendVerificationTokenResponse>() {
     public void onSuccess(HttpContext context, SendVerificationTokenResponse response) {
@@ -2632,7 +2656,7 @@ void deleteAllowedEmailAddressAsync(
 #### Example Usage
 
 ```java
-double emailAddressId = 238.854950023282;
+double emailAddressId = 232.457760184751;
 // Invoking the API call with sample inputs
 emailMarketing.deleteAllowedEmailAddressAsync(emailAddressId, new APICallBack<DeleteAllowedEmailAddressResponse>() {
     public void onSuccess(HttpContext context, DeleteAllowedEmailAddressResponse response) {
@@ -8029,7 +8053,7 @@ void updateMarkedVoiceReceiptsAsReadAsync(
 #### Example Usage
 
 ```java
-double dateBefore = 83.3991673534732;
+double dateBefore = 77.0019775149422;
 // Invoking the API call with sample inputs
 voice.updateMarkedVoiceReceiptsAsReadAsync(dateBefore, new APICallBack<MarkedVoiceReceiptsAsReadResponse>() {
     public void onSuccess(HttpContext context, MarkedVoiceReceiptsAsReadResponse response) {

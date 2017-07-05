@@ -138,13 +138,13 @@ The singleton instance of the ``` AccountController ``` class can be accessed fr
 account = client.account
 ```
 
-### <a name="create_a_new_account"></a>![Method: ](https://apidocs.io/img/method.png ".AccountController.create_a_new_account") create_a_new_account
+### <a name="create_a_new_member"></a>![Method: ](https://apidocs.io/img/method.png ".AccountController.create_a_new_member") create_a_new_member
 
 > **Note:** *Authentication isn't required to create a new account.*
 
 
 ```ruby
-def create_a_new_account(body); end
+def create_a_new_member(body); end
 ```
 
 #### Parameters
@@ -157,10 +157,9 @@ def create_a_new_account(body); end
 #### Example Usage
 
 ```ruby
-body_value = "    {        \"username\":\"johndoe1\",        \"user_email\":\"johndoe1@awesome.com\",        \"user_phone\":\"518-481-1001\",        \"user_first_name\":\"John\",        \"user_last_name\":\"Doe\",        \"country\":\"US\",        \"password\":\"pass\",        \"account_name\":\"The Awesome Company\"    }";
-body = JSON.parse(body_value);
+body = CreateANewAccountRequest.new
 
-result = account.create_a_new_account(body)
+result = account.create_a_new_member(body)
 
 ```
 
@@ -1086,7 +1085,7 @@ def delete_a_rule_2(rule_id); end
 #### Example Usage
 
 ```ruby
-rule_id = 234.399499573931
+rule_id = 228.0023097354
 
 result = automationRules.delete_a_rule_2(rule_id)
 
@@ -1725,6 +1724,24 @@ result = contacts.update_transfer_a_contact(from_list_id, contact_id, to_list_id
 ```
 
 
+### <a name="get_hello_contact"></a>![Method: ](https://apidocs.io/img/method.png ".ContactsController.get_hello_contact") get_hello_contact
+
+> TODO: Add a method description
+
+
+```ruby
+def get_hello_contact; end
+```
+
+#### Example Usage
+
+```ruby
+
+contacts.get_hello_contact()
+
+```
+
+
 [Back to List of Controllers](#list_of_controllers)
 
 ## <a name="countries_controller"></a>![Class: ](https://apidocs.io/img/class.png ".CountriesController") CountriesController
@@ -1888,7 +1905,7 @@ def update_send_verification_token(email_address_id); end
 #### Example Usage
 
 ```ruby
-email_address_id = 70.8947814655932
+email_address_id = 22.7744184004955
 
 result = emailMarketing.update_send_verification_token(email_address_id)
 
@@ -1943,7 +1960,7 @@ def delete_allowed_email_address(email_address_id); end
 #### Example Usage
 
 ```ruby
-email_address_id = 70.8947814655932
+email_address_id = 22.7744184004955
 
 result = emailMarketing.delete_allowed_email_address(email_address_id)
 
@@ -6019,7 +6036,7 @@ def update_marked_voice_receipts_as_read(date_before); end
 #### Example Usage
 
 ```ruby
-date_before = 56.7063893525425
+date_before = 141.804481405674
 
 result = voice.update_marked_voice_receipts_as_read(date_before)
 

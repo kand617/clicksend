@@ -494,13 +494,13 @@ The singleton instance of the ``` AccountController ``` class can be accessed vi
 	});
 ```
 
-### <a name="create_a_new_account"></a>![Method: ](https://apidocs.io/img/method.png ".AccountController.createANewAccount") createANewAccount
+### <a name="create_a_new_member"></a>![Method: ](https://apidocs.io/img/method.png ".AccountController.createANewMember") createANewMember
 
 > **Note:** *Authentication isn't required to create a new account.*
 
 
 ```javascript
-function createANewAccount(body)
+function createANewMember(body)
 ```
 #### Parameters
 
@@ -516,10 +516,10 @@ function createANewAccount(body)
 
 
 	app.controller("testController", function($scope, AccountController, CreateANewAccountResponse){
-        var body = new CreateANewAccountRequest(    {        "username":"johndoe1",        "user_email":"johndoe1@awesome.com",        "user_phone":"518-481-1001",        "user_first_name":"John",        "user_last_name":"Doe",        "country":"US",        "password":"pass",        "account_name":"The Awesome Company"    });
+        var body = new CreateANewAccountRequest({"key":"value"});
 
 
-		var result = AccountController.createANewAccount(body);
+		var result = AccountController.createANewMember(body);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1932,7 +1932,7 @@ function deleteARule(ruleId)
 
 
 	app.controller("testController", function($scope, AutomationRulesController, DeleteARuleResponse49){
-        var ruleId = 24.7161577896756;
+        var ruleId = 18.3189679511445;
 
 
 		var result = AutomationRulesController.deleteARule(ruleId);
@@ -2871,6 +2871,38 @@ function updateTransferAContact(fromListId, contactId, toListId)
 
 
 
+### <a name="get_hello_contact"></a>![Method: ](https://apidocs.io/img/method.png ".ContactsController.getHelloContact") getHelloContact
+
+> TODO: Add a method description
+
+
+```javascript
+function getHelloContact()
+```
+
+#### Example Usage
+
+```javascript
+
+
+	app.controller("testController", function($scope, ContactsController){
+
+
+		var result = ContactsController.getHelloContact();
+        //Function call returns a promise
+        result.then(function(success){
+			//success case
+			//getting context of response
+			console.log(success.getContext());
+		},function(err){
+			//failure case
+		});
+
+	});
+```
+
+
+
 [Back to List of Controllers](#list_of_controllers)
 
 ## <a name="countries_controller"></a>![Class: ](https://apidocs.io/img/class.png ".CountriesController") CountriesController
@@ -3108,7 +3140,7 @@ function updateSendVerificationToken(emailAddressId)
 
 
 	app.controller("testController", function($scope, EmailMarketingController, SendVerificationTokenResponse){
-        var emailAddressId = 116.211439681338;
+        var emailAddressId = 18.3189679511445;
 
 
 		var result = EmailMarketingController.updateSendVerificationToken(emailAddressId);
@@ -3190,7 +3222,7 @@ function deleteAllowedEmailAddress(emailAddressId)
 
 
 	app.controller("testController", function($scope, EmailMarketingController, DeleteAllowedEmailAddressResponse){
-        var emailAddressId = 116.211439681338;
+        var emailAddressId = 18.3189679511445;
 
 
 		var result = EmailMarketingController.deleteAllowedEmailAddress(emailAddressId);
@@ -9064,7 +9096,7 @@ function updateMarkedVoiceReceiptsAsRead(dateBefore)
 
 
 	app.controller("testController", function($scope, VoiceController, MarkedVoiceReceiptsAsReadResponse){
-        var dateBefore = 93.9741121297582;
+        var dateBefore = 251.081640399565;
 
 
 		var result = VoiceController.updateMarkedVoiceReceiptsAsRead(dateBefore);

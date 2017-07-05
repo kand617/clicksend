@@ -151,13 +151,13 @@ An instance of the ``` AccountController ``` class can be accessed from the API 
  account_client = client.account
 ```
 
-### <a name="create_a_new_account"></a>![Method: ](https://apidocs.io/img/method.png ".AccountController.create_a_new_account") create_a_new_account
+### <a name="create_a_new_member"></a>![Method: ](https://apidocs.io/img/method.png ".AccountController.create_a_new_member") create_a_new_member
 
 > **Note:** *Authentication isn't required to create a new account.*
 
 ```python
-def create_a_new_account(self,
-                             body)
+def create_a_new_member(self,
+                            body)
 ```
 
 #### Parameters
@@ -171,10 +171,9 @@ def create_a_new_account(self,
 #### Example Usage
 
 ```python
-body_value = "    {        \"username\":\"johndoe1\",        \"user_email\":\"johndoe1@awesome.com\",        \"user_phone\":\"518-481-1001\",        \"user_first_name\":\"John\",        \"user_last_name\":\"Doe\",        \"country\":\"US\",        \"password\":\"pass\",        \"account_name\":\"The Awesome Company\"    }"
-body = json.loads(body_value)
+body = CreateANewAccountRequest()
 
-result = account_client.create_a_new_account(body)
+result = account_client.create_a_new_member(body)
 
 ```
 
@@ -1120,7 +1119,7 @@ def delete_a_rule_2(self,
 #### Example Usage
 
 ```python
-rule_id = 106.478498017638
+rule_id = 149.853416844203
 
 result = automation_rules_client.delete_a_rule_2(rule_id)
 
@@ -1775,6 +1774,23 @@ result = contacts_client.update_transfer_a_contact(from_list_id, contact_id, to_
 ```
 
 
+### <a name="get_hello_contact"></a>![Method: ](https://apidocs.io/img/method.png ".ContactsController.get_hello_contact") get_hello_contact
+
+> TODO: Add a method description
+
+```python
+def get_hello_contact(self)
+```
+
+#### Example Usage
+
+```python
+
+contacts_client.get_hello_contact()
+
+```
+
+
 [Back to List of Controllers](#list_of_controllers)
 
 ## <a name="countries_controller"></a>![Class: ](https://apidocs.io/img/class.png ".CountriesController") CountriesController
@@ -1938,7 +1954,7 @@ def update_send_verification_token(self,
 #### Example Usage
 
 ```python
-email_address_id = 156.250606682734
+email_address_id = 241.348698735865
 
 result = email_marketing_client.update_send_verification_token(email_address_id)
 
@@ -1995,7 +2011,7 @@ def delete_allowed_email_address(self,
 #### Example Usage
 
 ```python
-email_address_id = 156.250606682734
+email_address_id = 241.348698735865
 
 result = email_marketing_client.delete_allowed_email_address(email_address_id)
 
@@ -6136,7 +6152,7 @@ def update_marked_voice_receipts_as_read(self,
 #### Example Usage
 
 ```python
-date_before = 233.557496461346
+date_before = 227.160306622815
 
 result = voice_client.update_marked_voice_receipts_as_read(date_before)
 

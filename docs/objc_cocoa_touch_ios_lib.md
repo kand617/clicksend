@@ -124,14 +124,14 @@ Configuration_BasicAuthPassword = "Configuration_BasicAuthPassword"; // The pass
 Account* account = [[Account alloc]init] ;
 ```
 
-### <a name="create_a_new_account_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".AccountController.createANewAccountAsyncWithBody") createANewAccountAsyncWithBody
+### <a name="create_a_new_member_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".AccountController.createANewMemberAsyncWithBody") createANewMemberAsyncWithBody
 
 > **Note:** *Authentication isn't required to create a new account.*
 
 
 ```objc
-function createANewAccountAsyncWithBody:(CreateANewAccountRequest*) body
-                completionBlock:(CompletedPostCreateANewAccount) onCompleted(body)
+function createANewMemberAsyncWithBody:(CreateANewAccountRequest*) body
+                completionBlock:(CompletedPostCreateANewMember) onCompleted(body)
 ```
 
 #### Parameters
@@ -148,10 +148,9 @@ function createANewAccountAsyncWithBody:(CreateANewAccountRequest*) body
 
 ```objc
     // Parameters for the API call
-    CreateANewAccountRequest* body = (CreateANewAccountRequest*) [APIHelper jsonDeserialize: @"    {        \"username\":\"johndoe1\",        \"user_email\":\"johndoe1@awesome.com\",        \"user_phone\":\"518-481-1001\",        \"user_first_name\":\"John\",        \"user_last_name\":\"Doe\",        \"country\":\"US\",        \"password\":\"pass\",        \"account_name\":\"The Awesome Company\"    }"
-                toClass: CreateANewAccountRequest.class];
+    CreateANewAccountRequest* body = [[CreateANewAccountRequest alloc]init];
 
-    [self.account createANewAccountAsyncWithBody: body  completionBlock:^(BOOL success, HttpContext* context, CreateANewAccountResponse* response, NSError* error) { 
+    [self.account createANewMemberAsyncWithBody: body  completionBlock:^(BOOL success, HttpContext* context, CreateANewAccountResponse* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -1263,7 +1262,7 @@ function deleteARuleAsyncWithRuleId:(double) ruleId
 
 ```objc
     // Parameters for the API call
-    double ruleId = 194.360332572535;
+    double ruleId = 4.9725789506792;
 
     [self.automationRules deleteARuleAsyncWithRuleId: ruleId  completionBlock:^(BOOL success, HttpContext* context, DeleteARuleResponse49* response, NSError* error) { 
        //Add code here
@@ -2017,6 +2016,27 @@ function updateTransferAContactAsyncWithFromListId:(double) fromListId
 ```
 
 
+### <a name="get_hello_contact_with_completion_block"></a>![Method: ](https://apidocs.io/img/method.png ".ContactsController.getHelloContactWithCompletionBlock") getHelloContactWithCompletionBlock
+
+> TODO: Add a method description
+
+
+```objc
+function getHelloContactWithCompletionBlock:(CompletedGetHelloContact) onCompleted()
+```
+
+
+
+#### Example Usage
+
+```objc
+
+    [self.contacts getHelloContactWithCompletionBlock:  ^(BOOL success, HttpContext* context, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
 [Back to List of Controllers](#list_of_controllers)
 
 ## <a name="countries_controller"></a>![Class: ](https://apidocs.io/img/class.png ".CountriesController") CountriesController
@@ -2197,7 +2217,7 @@ function updateSendVerificationTokenAsyncWithEmailAddressId:(double) emailAddres
 
 ```objc
     // Parameters for the API call
-    double emailAddressId = 152.637159345968;
+    double emailAddressId = 187.963142734004;
 
     [self.emailMarketing updateSendVerificationTokenAsyncWithEmailAddressId: emailAddressId  completionBlock:^(BOOL success, HttpContext* context, SendVerificationTokenResponse* response, NSError* error) { 
        //Add code here
@@ -2264,7 +2284,7 @@ function deleteAllowedEmailAddressAsyncWithEmailAddressId:(double) emailAddressI
 
 ```objc
     // Parameters for the API call
-    double emailAddressId = 152.637159345968;
+    double emailAddressId = 187.963142734004;
 
     [self.emailMarketing deleteAllowedEmailAddressAsyncWithEmailAddressId: emailAddressId  completionBlock:^(BOOL success, HttpContext* context, DeleteAllowedEmailAddressResponse* response, NSError* error) { 
        //Add code here
@@ -6955,7 +6975,7 @@ function updateMarkedVoiceReceiptsAsReadAsyncWithDateBefore:(double) dateBefore
 
 ```objc
     // Parameters for the API call
-    double dateBefore = 16.6672223511465;
+    double dateBefore = 10.2700325126154;
 
     [self.voice updateMarkedVoiceReceiptsAsReadAsyncWithDateBefore: dateBefore  completionBlock:^(BOOL success, HttpContext* context, MarkedVoiceReceiptsAsReadResponse* response, NSError* error) { 
        //Add code here
